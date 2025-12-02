@@ -9,7 +9,9 @@ import {
     condition,
     details,
     humidity,
-    windSpeed
+    windSpeed,
+    pressure,
+    line,
 } from './weatherapp.module.css'
 
 const WeatherApp = () => {
@@ -55,6 +57,8 @@ const WeatherApp = () => {
                     {weatherData.weather[0].description}
                 </p>
 
+                <hr className={line}/>
+
                 <div className={details}>
                     <div className={humidity}>
                         <p>Wilgotność</p>
@@ -64,6 +68,11 @@ const WeatherApp = () => {
                     <div className={windSpeed}>
                         <p>Prędkość wiatru</p>
                         <p>{weatherData.wind.speed} km/h</p>
+                    </div>
+
+                    <div className={pressure}>
+                        <p>Ciśnienie</p>
+                        <p>{weatherData.main.pressure} hPa</p>
                     </div>
                 </div>
             </div>
