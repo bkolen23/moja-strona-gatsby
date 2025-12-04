@@ -1,0 +1,37 @@
+.wrapper {
+  @apply mx-auto max-w-full text-center bg-blue-400 p-6 rounded-xl shadow-md;
+}
+
+.cityHeader {
+  @apply text-white text-2xl;
+}
+
+.temperature {
+  @apply text-white text-2xl font-semibold;
+}
+
+.feelsLike {
+  @apply text-white text-xl font-semibold my-2;
+}
+
+.condition {
+  @apply text-white text-xl font-semibold;
+}
+
+.details {
+  @apply flex justify-center items-center gap-[5%] text-white font-semibold;
+}
+
+.humidity p,
+.windSpeed p,
+.pressure p {
+  @apply text-white text-base font-semibold;
+}
+
+.line {
+  @apply w-full border-t-4 border-gray-300 my-5;
+}
+
+.select {
+  @apply mb-5 p-2 rounded-md w-full border-2 border-blue-600 bg-blue-200 font-semibold focus:outline-none;
+}
