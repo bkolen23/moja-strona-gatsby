@@ -115,6 +115,7 @@ const WeatherApp = () => {
                                 <p>Ciśnienie</p>
                                 <p>{weatherData.main.pressure} hPa</p>
                             </div>
+
                         </div>
                     </>
                 )}
