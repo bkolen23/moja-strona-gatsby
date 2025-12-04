@@ -1,3 +1,5 @@
+@reference "./global.css";
+
 .wrapper {
   @apply mx-auto max-w-full text-center bg-blue-400 p-6 rounded-xl shadow-md;
 }
