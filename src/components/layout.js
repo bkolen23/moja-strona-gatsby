@@ -1,13 +1,5 @@
 import * as React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import {
-  container,
-  siteTitle,
-  navLinks,
-  navLinkItem,
-  navLinkText,
-  heading,
-} from "../styles/layout.css"
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -21,36 +13,24 @@ const Layout = ({ pageTitle, children }) => {
   `)
 
   return (
-    <div className={container}>
-      <header className={siteTitle}>
-        {data.site.siteMetadata.title}
-      </header>
+    <div classNameName="mx-auto max-w-6xl font-inter">
 
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>Strona główna</Link>
-          </li>
-
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>O mnie</Link>
-          </li>
-
-          <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>Blog</Link>
-          </li>
-
-          <li className={navLinkItem}>
-            <Link to="/weatherapp" className={navLinkText}>Aplikacja pogodowa</Link>
-          </li>
-        </ul>
+      <nav class="bg-gray-800 text-white py-3 px-4 flex items-center justify-between">
+        <Link to="/" className="font-bold text-xl tracking-tight">Moja strona Gatsby</Link>
+        <div class="flex items-center">
+            <Link to="/" className="text-sm px-4 py-2 leading-none rounded-full hover:bg-gray-700">Strona główna</Link>
+            <Link to="/about" className="text-sm px-4 py-2 leading-none rounded-full hover:bg-gray-700">O mnie</Link>
+            <Link to="/blog" className="text-sm px-4 py-2 leading-none rounded-full hover:bg-gray-700">Blog</Link>
+            <Link to="/weatherapp" className="text-sm px-4 py-2 leading-none rounded-full hover:bg-gray-700">Aplikacja pogodowa</Link>
+        </div>
       </nav>
 
-      <main>
-        <h1 className={heading}>{pageTitle}</h1>
+      <main className="">
+        <h1 className="text-purple-700 text-2xl font-semibold my-6 text-center">{pageTitle}</h1>
         {children}
       </main>
     </div>
+
   )
 }
 

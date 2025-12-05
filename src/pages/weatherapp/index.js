@@ -2,19 +2,6 @@ import * as React from "react"
 import { useState, useEffect } from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import {
-  wrapper,
-  cityHeader,
-  temperature,
-  condition,
-  details,
-  feelsLike,
-  humidity,
-  windSpeed,
-  pressure,
-  line,
-  select,
-} from "../../styles/weatherapp.css"
 
 const WeatherApp = () => {
   const API_KEY = "6c5c8ce19dfcaff39d6d1386a97a7e97"
@@ -59,13 +46,13 @@ const WeatherApp = () => {
 
   return (
     <Layout pageTitle="Aplikacja pogodowa">
-      <div className={wrapper}>
+      <div className="mx-auto max-w-xl text-center bg-blue-400 p-6 rounded-xl shadow-md">
         {!selectedCity && (
-          <h2 className={cityHeader}>Wybierz miasto, aby wyświetlić pogodę</h2>
+          <h2 className="text-white text-2xl mb-4">Wybierz miasto, aby wyświetlić pogodę</h2>
         )}
 
         <select
-          className={select}
+          className="mb-5 p-2 rounded-md w-full border-2 border-blue-600 bg-blue-200 font-semibold focus:outline-none"
           value={selectedCity}
           onChange={(e) => {
             setSelectedCity(e.target.value)
@@ -79,43 +66,43 @@ const WeatherApp = () => {
         </select>
 
         {selectedCity && !weatherData && (
-          <h2 className={cityHeader}>Ładowanie pogody...</h2>
+          <h2 className="text-white text-2xl">Ładowanie pogody...</h2>
         )}
 
         {weatherData && (
           <>
-            <hr className={line} />
+            <hr className="w-full border-t-2 border-gray-50 my-5" />
 
-            <h2 className={cityHeader}>{selectedCity}</h2>
+            <h2 className="text-white text-2xl">{selectedCity}</h2>
 
-            <p className={temperature}>
+            <p className="text-white text-2xl font-semibold">
               {Math.round(weatherData.main.temp)}°C
             </p>
 
-            <div className={feelsLike}>
+            <div className="text-white text-xl font-semibold my-2">
               Odczuwalna: {Math.round(weatherData.main.feels_like)}°C
             </div>
 
-            <p className={condition}>
+            <p className="text-white text-xl font-semibold">
               {weatherData.weather[0].description}
             </p>
 
-            <hr className={line} />
+            <hr className="w-full border-t-2 border-gray-50 my-5" />
 
-            <div className={details}>
+            <div className="flex justify-center items-center gap-[5%] text-white font-semibold">
 
-              <div className={humidity}>
-                <p>Wilgotność</p>
+              <div>
+                <p className="text-white text-base font-semibold">Wilgotność</p>
                 <p>{weatherData.main.humidity}%</p>
               </div>
 
-              <div className={windSpeed}>
-                <p>Prędkość wiatru</p>
+              <div>
+                <p className="text-white text-base font-semibold">Prędkość wiatru</p>
                 <p>{weatherData.wind.speed} km/h</p>
               </div>
 
-              <div className={pressure}>
-                <p>Ciśnienie</p>
+              <div>
+                <p className="text-white text-base font-semibold">Ciśnienie</p>
                 <p>{weatherData.main.pressure} hPa</p>
               </div>
 
