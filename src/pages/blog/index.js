@@ -9,7 +9,7 @@ const BlogPage = ({ data }) => {
             {
                 data.allMdx.nodes.map((node) =>(
                     <article key={node.id}>
-                        <h2>
+                        <h2 className="text-purple-700 text-xl font-semibold mt-5">
                             <Link to={`/blog/${node.frontmatter.slug}`}>
                                 {node.frontmatter.title}
                             </Link>

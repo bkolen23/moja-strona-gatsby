@@ -60,7 +60,7 @@ const Layout = ({ pageTitle, children }) => {
       </div>
 
       <main className="mx-auto max-w-6xl flex-grow">
-        <h1 className="text-purple-700 text-2xl font-semibold my-6 text-center">{pageTitle}</h1>
+        <h1 className="text-purple-700 text-2xl font-semibold my-8 text-center">{pageTitle}</h1>
         {children}
       </main>
 

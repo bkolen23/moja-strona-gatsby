@@ -46,13 +46,13 @@ const WeatherApp = () => {
 
   return (
     <Layout pageTitle="Aplikacja pogodowa">
-      <div className="mx-auto max-w-xl text-center bg-blue-400 p-6 rounded-xl shadow-md">
+      <div className="mx-auto max-w-xl text-center p-6 rounded-xl shadow-md bg-gradient-to-b from-blue-400 via-blue-300 to-indigo-300">
         {!selectedCity && (
           <h2 className="text-white text-2xl mb-4">Wybierz miasto, aby wyświetlić pogodę</h2>
         )}
 
         <select
-          className="mb-5 p-2 rounded-md w-full border-2 border-blue-600 bg-blue-200 font-semibold focus:outline-none"
+          className="mb-5 p-2 rounded-md w-full border-2 border-indigo-400 bg-blue-200 font-semibold focus:outline-none"
           value={selectedCity}
           onChange={(e) => {
             setSelectedCity(e.target.value)
