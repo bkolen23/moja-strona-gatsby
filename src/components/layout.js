@@ -59,13 +59,13 @@ const Layout = ({ pageTitle, children }) => {
         </div>
       </div>
 
-      <header className="flex items-center justify-items-center">
+      <header className="flex items-center justify-items-center p-2">
         <div className="w-screen">
           <h1 className="text-purple-700 text-2xl font-semibold my-8 text-center">{pageTitle}</h1>
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl flex-grow text-justify">
+      <main className="mx-auto max-w-6xl flex-grow text-justify max-lg:mx-5">
         {children}
       </main>
 

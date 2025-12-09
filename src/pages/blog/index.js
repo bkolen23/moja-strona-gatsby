@@ -15,13 +15,13 @@ const BlogPage = ({ data }) => {
                     return (
                         <article 
                             key={node.id} 
-                            className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow"
+                            className="bg-white p-4 rounded-xl shadow hover:shadow-lg transition-shadow bg-gray-50"
                         >
                             <div className="mb-4">
                                 {image && (
                                     <GatsbyImage
                                         image={image}
-                                        alt={node.frontmatter.hero_image_alt || "Zdjęcie posta"}
+                                        alt={node.frontmatter.hero_image_alt}
                                         className="rounded-md"
                                     />
                                 )}
