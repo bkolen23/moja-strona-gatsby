@@ -16,7 +16,7 @@ const BlogPost = ({ data, children}) => {
             />
             <p>
                 Autor zdjęcia:{" "}
-                <a href={data.mdx.frontmatter.hero_image_credit_link} className="text-purple-700">
+                <a href={data.mdx.frontmatter.hero_image_credit_link} className="text-purple-700 hover:text-purple-900">
                     {data.mdx.frontmatter.hero_image_credit_text}
                 </a>
             </p>

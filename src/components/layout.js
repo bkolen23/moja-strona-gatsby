@@ -22,7 +22,7 @@ const Layout = ({ pageTitle, children }) => {
       <nav className="bg-gray-800 text-white py-3 px-4 flex items-center justify-between">
 
         <Link to="/" className="flex items-center">
-          <StaticImage className="w-10 mr-2" src="../images/icon.png" alt="Moja strona Gatsby" />
+          <StaticImage className="w-10 mr-3" src="../images/icon.png" alt="Moja strona Gatsby" />
           <span className="text-2xl font-semibold">Moja strona Gatsby</span>
         </Link>
 
@@ -59,8 +59,13 @@ const Layout = ({ pageTitle, children }) => {
         </div>
       </div>
 
-      <main className="mx-auto max-w-6xl flex-grow">
-        <h1 className="text-purple-700 text-2xl font-semibold my-8 text-center">{pageTitle}</h1>
+      <header className="flex items-center justify-items-center">
+        <div className="w-screen">
+          <h1 className="text-purple-700 text-2xl font-semibold my-8 text-center">{pageTitle}</h1>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-6xl flex-grow text-justify">
         {children}
       </main>
 
