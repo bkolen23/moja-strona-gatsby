@@ -8,13 +8,17 @@ hero_image_credit_text: "GLEB GURENKO"
 hero_image_credit_link: "https://unsplash.com/photos/a-large-body-of-water-surrounded-by-mountains-vzkm2YVK8KY"
 ---
 
-# **Optymalizacja Reacta — praktyczne wskazówki**
+# **Optymalizacja aplikacji React: praktyczne wskazówki**
 
-Kilka praktycznych technik optymalizacji:
+React to potężna biblioteka do tworzenia interfejsów użytkownika, ale przy większych projektach łatwo napotkać problemy z wydajnością. W tym artykule przedstawię kilka praktycznych sposobów na przyspieszenie aplikacji React.
 
-## `React.memo`
+## 1. Używaj `React.memo`
+
+Jeżeli komponent renderuje się zbyt często bez potrzeby, można go opakować w `React.memo`.  
+Dzięki temu React zapamięta poprzednie propsy i nie będzie renderował komponentu, jeśli nie zmieniły się dane.
 
 ```jsx
-const Button = React.memo(function Button({ onClick }) {
-  return <button onClick={onClick}>Kliknij</button>;
+const MyComponent = React.memo(({ value }) => {
+  console.log("Renderuję komponent");
+  return <div>{value}</div>;
 });
