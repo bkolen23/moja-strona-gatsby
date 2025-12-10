@@ -45,7 +45,7 @@ const WeatherApp = () => {
   }, [selectedCity])
 
   return (
-    <Layout pageTitle="Aplikacja pogodowa">
+    <Layout pageTitle="Aplikacja pogodowa" headerContent="Sprawdź aktualną pogodę w swoim mieście - szybko i dokładnie.">
       <div className="mx-auto max-w-xl text-center p-6 rounded-xl shadow-md bg-gradient-to-b from-blue-400 via-blue-300 to-indigo-300">
         {!selectedCity && (
           <h2 className="text-white text-2xl mb-4">Wybierz miasto, aby wyświetlić pogodę</h2>

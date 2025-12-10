@@ -5,7 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 const AboutPage = () => {
     return (
-        <Layout pageTitle="O mnie">
+        <Layout pageTitle="O mnie" headerContent="Uczę się Gatsby, a ta strona dokumentuje moje pierwsze kroki w tym środowisku.">
             <p>Witaj! Jestem twórcą tej strony zrobionej przy użyciu Gatsby.</p>
 
             <div className="mx-auto max-w-3xl p-6 rounded-xl shadow-md m-8 bg-gray-50">

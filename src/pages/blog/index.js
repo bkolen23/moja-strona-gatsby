@@ -6,8 +6,10 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const BlogPage = ({ data }) => {
     return (
-        <Layout pageTitle="Posty na Blogu">
+        <Layout pageTitle="Posty na Blogu" headerContent="Witaj na blogu. Dokumentuję tutaj wszystkie postępy mojego projektu.">
 
+            <h2 className="text-purple-700 text-2xl font-semibold mb-4">Ostatnie artykuły</h2>
+            <hr className="mb-4 w-full border-t-2 border-gray-200"/>
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
                 {data.allMdx.nodes.map(node => {
                     const image = getImage(node.frontmatter.hero_image)

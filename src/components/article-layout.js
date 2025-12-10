@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useState } from "react"
 
-const Layout = ({ pageTitle, children, headerContent }) => {
+const ArticleLayout = ({ pageTitle, children, headerContent }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const data = useStaticQuery(graphql`
@@ -59,12 +59,9 @@ const Layout = ({ pageTitle, children, headerContent }) => {
         </div>
       </div>
 
-      <header className="flex items-center justify-items-center p-16 mb-12 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700">
+      <header className="flex items-center justify-items-center p-2">
         <div className="w-screen">
-          <h1 className="text-gray-100 text-4xl font-semibold mb-8 text-center">{pageTitle}</h1>
-          <p className="text-center text-gray-300 text-lg">
-            {headerContent}
-          </p>
+          <h1 className="text-purple-700 text-2xl font-semibold my-8 text-center">{pageTitle}</h1>
         </div>
       </header>
 
@@ -72,7 +69,7 @@ const Layout = ({ pageTitle, children, headerContent }) => {
         {children}
       </main>
 
-      <footer className="flex flex-col space-y-10 justify-center mt-14 bg-gray-700 mx-auto py-7 w-full">
+      <footer className="flex flex-col space-y-10 justify-center mt-10 bg-gray-700 mx-auto py-7 w-full">
         <nav className="flex justify-center flex-wrap gap-6 text-gray-300 font-medium">
           <Link to="/" className="hover:text-gray-400">Strona główna</Link>
           <Link to="/about" className="hover:text-gray-400">O mnie</Link>
@@ -87,4 +84,4 @@ const Layout = ({ pageTitle, children, headerContent }) => {
   )
 }
 
-export default Layout
+export default ArticleLayout

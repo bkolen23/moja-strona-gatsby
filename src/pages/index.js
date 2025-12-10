@@ -5,7 +5,7 @@ import Seo from '../components/seo'
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Strona główna">
+    <Layout pageTitle="Strona główna" headerContent="Witaj na stronie głównej mojego projektu.">
       <p className="mb-5">Robię tę stronę przy pomocy poradnika Gatsby</p>
       <StaticImage
         className="m-6"
