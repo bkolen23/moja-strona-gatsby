@@ -8,7 +8,7 @@ const IndexPage = () => {
     <Layout pageTitle="Strona główna" headerContent="Witaj na stronie głównej mojego projektu.">
       <p className="mb-5">Robię tę stronę przy pomocy poradnika Gatsby</p>
       <StaticImage
-        className="m-6"
+        className="m-6 rounded-lg"
         alt="Pies"
         src="../images/dog.jpg"
       />

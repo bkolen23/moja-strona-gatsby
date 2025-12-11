@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useState } from "react"
+import ThemeToggle from "./toggle-theme"
 
 const Layout = ({ pageTitle, children, headerContent }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,7 +18,7 @@ const Layout = ({ pageTitle, children, headerContent }) => {
   `)
 
   return (
-    <div className="font-inter min-h-screen flex flex-col">
+    <div className="font-inter min-h-screen flex flex-col dark:bg-gray-700">
 
       <nav className="bg-gray-800 text-white py-3 px-4 flex items-center justify-between">
 
@@ -72,14 +73,14 @@ const Layout = ({ pageTitle, children, headerContent }) => {
         {children}
       </main>
 
-      <footer className="flex flex-col space-y-10 justify-center mt-14 bg-gray-700 mx-auto py-7 w-full">
+      <footer className="flex flex-col space-y-10 justify-center mt-14 bg-gradient-to-t from-gray-800 to-gray-700 mx-auto py-7 w-full">
         <nav className="flex justify-center flex-wrap gap-6 text-gray-300 font-medium">
           <Link to="/" className="hover:text-gray-400">Strona główna</Link>
           <Link to="/about" className="hover:text-gray-400">O mnie</Link>
           <Link to="/blog" className="hover:text-gray-400">Blog</Link>
           <Link to="/weatherapp" className="hover:text-gray-400">Aplikacja pogodowa</Link>
         </nav>
-
+        <ThemeToggle/>
         <p className="text-center text-gray-200 font-medium">&copy;2025 Moja strona Gatsby</p>
       </footer>
 
