@@ -8,8 +8,8 @@ const AboutPage = () => {
         <Layout pageTitle="O mnie" headerContent="Uczę się Gatsby, a ta strona dokumentuje moje pierwsze kroki w tym środowisku.">
             <p>Witaj! Jestem twórcą tej strony zrobionej przy użyciu Gatsby.</p>
 
-            <div className="mx-auto max-w-3xl p-6 rounded-xl shadow-md m-8 bg-gray-50">
-                <h2 className="text-purple-700 text-xl font-semibold mb-3 w-full">Parę słów o mnie</h2>
+            <div className="mx-auto max-w-3xl p-6 rounded-xl shadow-md m-8 bg-gray-50 dark:bg-gray-800">
+                <h2 className="text-purple-700 dark:text-purple-400 text-xl font-semibold mb-3 w-full">Parę słów o mnie</h2>
                 <div className="flex max-md:block">
                     <div>
                         <p className="text-base">

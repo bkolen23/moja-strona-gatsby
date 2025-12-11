@@ -8,8 +8,8 @@ const BlogPage = ({ data }) => {
     return (
         <Layout pageTitle="Posty na Blogu" headerContent="Witaj na blogu. Dokumentuję tutaj wszystkie postępy mojego projektu.">
 
-            <h2 className="text-purple-700 text-2xl font-semibold mb-4">Ostatnie artykuły</h2>
-            <hr className="mb-4 w-full border-t-2 border-gray-200"/>
+            <h2 className="text-purple-700 dark:text-purple-400 text-2xl font-semibold mb-4">Ostatnie artykuły</h2>
+            <hr className="mb-4 w-full border-t-2 border-gray-200 dark:border-gray-800"/>
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
                 {data.allMdx.nodes.map(node => {
                     const image = getImage(node.frontmatter.hero_image)
@@ -17,7 +17,7 @@ const BlogPage = ({ data }) => {
                     return (
                         <article 
                             key={node.id} 
-                            className="bg-white p-4 rounded-xl shadow hover:shadow-lg transition-shadow bg-gray-50"
+                            className="p-4 rounded-xl shadow hover:shadow-lg transition-shadow bg-gray-50 dark:bg-gray-800"
                         >
                             <div className="mb-4">
                                 {image && (
@@ -29,13 +29,13 @@ const BlogPage = ({ data }) => {
                                 )}
                             </div>
 
-                            <h2 className="text-purple-700 hover:text-purple-900 text-xl font-semibold mt-3">
+                            <h2 className="text-purple-700 dark:text-purple-400 hover:text-purple-900 dark:hover:text-purple-600 text-xl font-semibold mt-3">
                                 <Link to={`/blog/${node.frontmatter.slug}`}>
                                     {node.frontmatter.title}
                                 </Link>
                             </h2>
 
-                            <p className="text-gray-600 text-sm mt-1">
+                            <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
                                 Opublikowano: {node.frontmatter.date}
                             </p>
                         </article>

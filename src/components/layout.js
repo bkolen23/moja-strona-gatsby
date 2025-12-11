@@ -69,7 +69,7 @@ const Layout = ({ pageTitle, children, headerContent }) => {
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl flex-grow text-justify max-lg:mx-5">
+      <main className="mx-auto max-w-6xl flex-grow text-justify max-lg:mx-5 dark:text-gray-100">
         {children}
       </main>
 
