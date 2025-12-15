@@ -73,7 +73,7 @@ const Layout = ({ pageTitle, children, headerContent }) => {
         {children}
       </main>
 
-      <footer className="flex flex-col space-y-10 justify-center mt-14 bg-gradient-to-t from-gray-800 to-gray-700 mx-auto py-7 w-full">
+      <footer className="flex flex-col space-y-10 justify-center items-center mt-14 bg-gradient-to-t from-gray-800 to-gray-700 mx-auto py-7 w-full">
         <nav className="flex justify-center flex-wrap gap-6 text-gray-300 font-medium">
           <Link to="/" className="hover:text-gray-400">Strona główna</Link>
           <Link to="/about" className="hover:text-gray-400">O mnie</Link>
