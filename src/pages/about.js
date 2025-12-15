@@ -16,7 +16,7 @@ const AboutPage = () => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nobis deleniti consequuntur sunt? Aspernatur quo debitis perspiciatis explicabo placeat sapiente perferendis excepturi dicta et incidunt. Ullam molestias fuga qui optio amet beatae, earum asperiores minima corporis architecto! Ducimus voluptatibus fugit dolorem nulla nihil maiores minus id facilis harum! Molestiae, animi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, excepturi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, in!
                         </p>
                     </div>
-                    <div className="ml-4">
+                    <div className="ml-5 max-md:ml-auto max-md:mt-5">
                         <StaticImage src='../images/user.png' alt="User" className="rounded-xl"/>
                     </div>
                 </div>
